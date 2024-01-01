@@ -1,0 +1,659 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.container{
+    height: auto;
+    width: 100%;
+}
+
+.content{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.navbar{
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+} 
+
+
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(29, 29, 193);
+    position: absolute;
+    top: 0;
+    line-height: 50px;
+    
+}
+
+nav .nav-left{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 500px;
+    margin-left: 100px;
+    padding: 15px 0px;
+    
+   }
+
+nav .nav-left .logo{
+    height: 40px;
+    width: 140px;
+}
+
+nav .nav-left .icons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 200px;
+}
+
+nav .nav-left .icons img{
+    height: 30px;
+    width: 30px;
+}
+
+nav .nav-right{
+    height: 60px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top:-5px;
+    right: 80px;
+    
+    margin-top: 16px;
+
+}
+
+nav .nav-right .green-dot{
+    height: 10px;
+    width: 10px;
+    border: 1px solid white;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    right: -0px;
+}
+nav .nav-right .search-box{
+    height: 40px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    padding: 7px 10px;
+    margin-left: 0px;
+    
+}
+
+nav .nav-right .search-box img{
+    height: 20px;
+    width: 20px;
+}
+
+nav .nav-right .search-box input{
+    border: none;
+    height: 30px;
+    width: 400px;
+    background-color: white;
+    padding: 10px 10px;
+    margin-top: -5px;
+    outline: 0;
+}
+ 
+nav .nav-right .user-profile label .image{
+    height: 60px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left:2px;
+    margin-top: -7px;
+    cursor: pointer;
+
+}
+
+nav .nav-right .setting{
+    height: 400px;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+      padding: 20px 20px;
+    position: relative;
+    border-radius: 5px;
+    display: none;
+}
+
+nav .nav-right .setting .profile{
+    height: 60px;
+    width: 330px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    
+}
+
+.profile img{
+    height: 60px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+}
+
+.profile .name{
+    height: 60px;
+    width: 200px;
+    
+}
+
+.profile .name h4{
+    color: gray;
+}
+
+.profile .name a{
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    top: 12px;
+}
+
+.setting .hr1{
+    width: 90%;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+}
+
+nav .nav-right .setting .feedback{
+    height: 60px;
+    width: 330px;
+    display: flex;
+    
+    justify-content: space-between;
+    
+    position: absolute;
+    top: 100px;
+}
+
+.feedback img{
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+}
+
+.feedback .fedbk{
+    height: 60px;
+    width: 250px;
+    
+    margin-right: 20px;
+}
+
+.feedback .fedbk h4{
+        color: gray;
+}
+
+.feedback .fedbk a{
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    color: blue;
+
+}
+
+.setting .hr2{
+    width: 90%;
+    position: absolute;
+    top: 165px;
+    left: 20px;
+}
+
+.setting .set-option{
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 180px;
+    
+} 
+
+.setting .set-option table .mode{
+    height: 30px;
+    width: 30px;
+    
+}
+
+.setting .set-option table .arrow{
+    height: 10px;
+    width: 10px;
+}
+
+.setting .set-option table a{
+    text-decoration: none;
+    font-size: 16px;
+    color: gray;
+}
+
+#check:checked ~ .setting{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+  
+}
+
+#check{
+    display: none;
+}
+ 
+/* body */
+
+.body{
+    height: auto;
+    width: 69%;
+    position: absolute;
+    top:70px;
+    left: 250px;
+}
+
+.body .intro-img{
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+    background-image: url(images/cover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+
+
+.body .intro-name{
+    height: 130px;
+    width: auto;
+    display: flex;
+    position: relative;
+}
+
+.body .intro-name img{
+    height: 130px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.body .intro-name .name{
+    margin-left: 50px;
+}
+
+.body .intro-name .name h3{
+    color: gray;
+}
+
+.body .intro-name .name p{
+    color: gray;
+    font-size: 15px;
+}
+
+.body .intro-name .name img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.body .intro-name .friends{
+    height: 30px;
+    width:110px;
+    border-radius: 5px;
+    background-color: rgb(197, 192, 192);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 0px;
+    position: absolute;
+    right: 130px;
+    
+}
+
+.body .intro-name .friends img{
+    height: 20px;
+    width: 20px;
+}
+
+.body .intro-name .message{
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 0px;
+    margin-left: 20px;
+    position: absolute;
+    right: 0px;
+}
+
+.body .intro-name .message img{
+    height: 20px;
+    width: 20px;
+}
+
+.body .intro-name .message font{
+    color: white;
+}
+
+.body .intro-name .more{
+    height: 30px;
+    width: 40px;
+    background-color: rgb(229, 233, 241);
+    border-radius: 5px;
+    padding: 3px 5px;
+    position: absolute;
+    right: 0px;
+    top: 45px;
+    
+}
+
+.body .intro-name .more img{
+    height: 5px;
+    width: 30px;
+}
+
+.body .portfolio{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .portfolio .left-side{
+    height: auto;
+    width: 335px;
+}
+
+.body .portfolio .left-side h2{
+    color: black;
+}
+
+.body .portfolio .left-side p{
+    color: gray;
+    font-size: 15px;
+    text-align: center;
+}
+
+.body .portfolio .left-side p img{
+    height: 15px;
+    width: 15px;
+}
+
+.body .portfolio .left-side table img{
+    height: 20px;
+    width: 20px;
+}
+
+.body .portfolio .left-side table{
+    font-size: 17px;
+    color: gray;
+}
+
+.body .portfolio .left-side .photo{
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .portfolio .left-side .photo a{
+    text-decoration: none;
+    color: blue;
+    font-size: 13px;
+}
+
+.body .portfolio .left-side .photo1{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .portfolio .left-side .photo1 img{
+    height: 100px;
+    width: 100px;
+}
+
+.body .portfolio .left-side .friends{
+    height: 20px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .portfolio .left-side .friends a{
+    text-decoration: none;
+    color: blue;
+    font-size: 13px;
+}
+
+.body .portfolio .left-side .member1{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .portfolio .left-side .members img{
+    height: 100px;
+    width: 100px;
+}
+
+.body .portfolio .left-side .members p{
+    color: gray;
+    font-size: 13px;
+    text-align: left;
+}
+
+.body .portfolio .left-side .para1{
+    text-align: left;
+    font-size: 12px;
+    color: gray;
+}
+
+.body .portfolio .right-side{
+    height: auto;
+    width: 655px;
+}
+
+.body .portfolio .right-side .intro{
+    height: 60px;
+    width: 655px;
+    display: flex;
+    padding: 0 50px;
+}
+
+.body .portfolio .right-side .intro img{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.body .portfolio .right-side .intro .name{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.body .portfolio .right-side .intro h4{
+    color: gray;
+}
+
+.body .portfolio .right-side .intro font{
+    color: gray;
+    font-size: 13px;
+}
+
+.body .portfolio .right-side .question{
+    height: auto;
+    width: 500px;
+    margin-left: 120px;
+
+}
+
+.body .portfolio .right-side .question font{
+    color: gray;
+    font-size: 15px;
+}
+
+ .right-side .question .middle-hr{
+    width: 100%;
+}
+
+ .right-side .question .activities{
+    width: 400px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-side .question .activities .activities1{
+    display: flex;
+    
+}
+
+.right-side .question .activities .activities1 img{
+height: 20px;
+width: 20px;
+}
+
+.right-side .question .activities .activities1 a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+
+}
+
+.right-side .posts{
+    height: auto;
+    width: 655px;
+}
+
+.right-side .posts .post1{
+    height: 60px;
+    width: 655px;
+    display: flex;
+    padding: 0 50px;
+
+}
+
+.right-side .posts .post1 .img1{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.right-side .posts .post1 .name1{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.right-side .posts .post1  .name1 h4{
+    color: gray;
+}
+
+.right-side .posts .post1 .name1 font{
+    color: gray;
+    font-size: 15px;
+}
+
+.right-side .posts .post1  .more{
+    height: 5px;
+    width: 20px;
+    transform: rotate(90deg);
+    margin-left: 300px;
+    margin-top: 15px;
+}
+
+.right-side .posts p{
+    color: gray;
+    height: 60px;
+    width: 655px;
+    padding: 0 50px;
+    font-size: 15px;
+}
+
+.right-side .posts p font{
+    color: rgb(67, 65, 65)
+}
+
+.right-side .posts p a{
+    text-decoration: none;
+    color: blue;
+    font-size: 15px;
+}
+
+.right-side .posts .feed-image-1{
+    height: 350px;
+    width: 545px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+.right-side .like{
+    height: 50px;
+    width: 655px;
+    padding: 0 50px;
+    display: flex;
+    
+}
+
+.right-side .like .like1 img{
+    height: 15px;
+    width: 15px;
+}
+
+.right-side .like .like1 font{
+    font-size: 15px;
+}
+
+.right-side .like .comment img{
+    height: 15px;
+    width: 15px;
+    margin-left: 20px;
+
+}
+
+.right-side .like .comment font{
+    font-size: 15px;
+}
+
+.right-side .like .share img{
+    height: 15px;
+    width: 15px;
+    margin-left: 20px;
+}
+
+.right-side .like .share font{
+    font-size: 15px;
+}
+
+
+.right-side .like .img2 img{
+    height: 20px;
+    width: 15px;
+    border-radius: 50%;
+    margin-left: 350px;
+}
+
+.body .para2{
+    text-align: center;
+    color: gray;
+    font-size: 16px;
+}
